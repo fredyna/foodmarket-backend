@@ -115,7 +115,7 @@ class UserController extends Controller
             'file' => 'required|image|max:2048'
         ]);
 
-        if (!$validator->fails()) {
+        if ($validator->fails()) {
             return ResponseFormatter::error(
                 ['error' => $validator->errors()],
                 'Update photo fails',
