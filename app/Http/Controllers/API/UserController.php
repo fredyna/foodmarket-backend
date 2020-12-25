@@ -64,7 +64,7 @@ class UserController extends Controller
             ]);
 
             $user = User::create([
-                'name' => $request->nama,
+                'name' => $request->name,
                 'email' => $request->email,
                 'address' => $request->address,
                 'houseNumber' => $request->houseNumber,
